@@ -1,0 +1,109 @@
+<h3 style="text-align:center">STUDENT REGITION FORM</h3>
+<form style="text-align:center" [formGroup]="addForm" novalidate>
+
+ 
+<!----- First Name ---------------------------------------------------------->
+
+<br>FIRST NAME
+<br>
+
+<div  [ngClass]="{'has-error': hasFieldError('name')}">
+    <input type="text" formControlName="name"><br>
+   <label [hidden]="!hasFieldError('name')">required</label> 
+  </div>
+  
+<!----- Mobile Number ---------------------------------------------------------->
+
+<br>MOBILE NUMBER
+<br>
+<div  [ngClass]="{'has-error': hasFieldError('name')}">
+<input type="text" name="Mobile_Number" maxlength="10" formControlName="mobileNumber" />
+
+<label [hidden]="!hasFieldError('mobileNumber')">required</label> 
+
+</div>
+<!----- Gender ----------------------------------------------------------->
+
+<br>GENDER
+<br>
+Male <input type="radio" name="Gender" value="Male" />
+Female <input type="radio" name="Gender" value="Female" />
+
+
+ 
+<!----- Address ---------------------------------------------------------->
+
+<br>ADDRESS <br /><br /><br />
+<br><textarea name="Address" rows="4" cols="30"></textarea>
+
+ 
+<!----- City ---------------------------------------------------------->
+
+<br>CITY
+<br><input type="text" name="City" maxlength="30" />
+
+
+
+ 
+<!----- Pin Code ---------------------------------------------------------->
+
+<br>PIN CODE
+<br><input type="text" name="Pin_Code" maxlength="6" />
+
+
+
+ 
+<!----- State ---------------------------------------------------------->
+
+<br>STATE
+<br><input type="text" name="State" maxlength="30" />
+
+
+
+ 
+ 
+<!----- Hobbies ---------------------------------------------------------->
+<!--  
+
+<br>HOBBIES <br /><br /><br />
+ 
+<br>
+Drawing
+<input type="checkbox" name="Hobby_Drawing" value="Drawing" />
+Singing
+<input type="checkbox" name="Hobby_Singing" value="Singing" />
+Dancing
+<input type="checkbox" name="Hobby_Dancing" value="Dancing" />
+Sketching
+<input type="checkbox" name="Hobby_Cooking" value="Cooking" />
+<br />
+Others
+<input type="checkbox" name="Hobby_Other" value="Other">
+<input type="text" name="Other_Hobby" maxlength="30" />
+
+< -->
+ 
+ 
+<!----- Course ---------------------------------------------------------->
+
+<!-- <br>COURSES<br />APPLIED FOR
+<br>
+BCA
+<input type="radio" name="Course_BCA" value="BCA">
+B.Com
+<input type="radio" name="Course_BCom" value="B.Com">
+B.Sc
+<input type="radio" name="Course_BSc" value="B.Sc">
+B.A
+<input type="radio" name="Course_BA" value="B.A"> -->
+
+
+ 
+<!----- Submit and Reset ------------------------------------------------->
+
+<br>
+
+<button (click)="addStudent(addForm.value)" [disabled]="!addForm.valid">Submit</button>
+
+formStatus{{addForm.status}}
+ </form>

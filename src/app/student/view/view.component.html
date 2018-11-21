@@ -1,0 +1,25 @@
+<table>
+  <tr>
+    <th>name</th>
+    <th>date</th>
+    <th>mobileNumber</th>
+    <th>gender</th>
+    <th>Dob</th>
+    <th>address</th>
+    <th>city</th>
+    <th>pincode</th>
+  </tr>
+  <tr *ngFor="let student of students">
+    <td>{{student.id}}</td>
+    <td>{{student.name}}</td>
+    <td>{{student.date}}</td>
+    <td>{{student.mobileNumber}}</td>
+    <td>{{student.gender}}</td>
+    <td>{{student.dob}}</td>
+    <td>{{student.address}}</td>
+    <td>{{student.city}}</td>
+    <td>{{student.pincode}}</td>
+    <td><button (click)="onEdit(student.id)">Edit</button></td>
+    <td><button (click)="ondDelete(student.id)">delete</button></td>
+  </tr>
+</table>
